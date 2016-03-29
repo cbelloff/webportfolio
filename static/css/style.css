@@ -1,0 +1,22 @@
+body {
+	background-color: #FFA8EE;
+	border: solid black thin;
+	margin: 50px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.navbar-dark {
+	background-color: red;
+}
+
+header .testing {
+	background-color: blue;
+	display: block;
+}
+
+footer {
+	text-align:center;
+}

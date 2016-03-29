@@ -1,0 +1,32 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+	<p>Chicken noodle soup is my favorite food.</p>
+	
+	<a href='index.html'>
+		<img src='https://s.yimg.com/fz/api/res/1.2/qEk2COtn.YDGNQzz_o0iNQ--/YXBwaWQ9c3JjaGRkO2g9NTMxO3E9OTU7dz04MDA-/http://3.bp.blogspot.com/-BAmdzP3o288/TelKjerfBkI/AAAAAAAABaY/HB_Cy-KH2Po/s1600/cute-puppy-pictures4.jpg'>
+		</img>	
+
+	</a>
+	
+	<div id='special_tag'>asdf</div>
+	<div>lunch</div>
+
+	<script>
+		//alert("root beer");
+		function clicker() {
+			//alert("hi");
+			console.log("clicker ran!");
+
+			var button = document.createElement('button');
+			button.innerHTML = "New Button";
+			button.className = "testing";
+
+			var L = document.getElementsByTagName('div');
+			L[0].innerHTML = "python";
+		}
+		//clicker();
+
+
+	</script>
+{% endblock %}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset= "UTF-8">
+	<link href="../static/css/bootstrap.css" rel="stylesheet">
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+	<header>
+		<img class="col-md-4 "src='https://s.yimg.com/fz/api/res/1.2/qEk2COtn.YDGNQzz_o0iNQ--/YXBwaWQ9c3JjaGRkO2g9NTMxO3E9OTU7dz04MDA-/http://3.bp.blogspot.com/-BAmdzP3o288/TelKjerfBkI/AAAAAAAABaY/HB_Cy-KH2Po/s1600/cute-puppy-pictures4.jpg' width='200'
+		height='150' style='display: inline;'></img>
+		<title class="col-md-4" style='display: inline;'>{{Title}}</title>
+		
+		<h2 style='display: inline;'>{{header}}</h2>
+		
+		
+
+		<nav class="navbar navbar-static-top navbar-dark bg-inverse">
+			<ul class="nav navbar-nav">
+        		<li class="nav-item active">
+          			<a class="nav-link" href="index.html">Home</a>
+        		</li>
+
+        		<li class="nav-item">
+          			<a class="nav-link" href="pictures.html">Pictures</a>
+        		</li>
+
+       			<li class="nav-item">
+          			<a class="nav-link" href="blogs.html">Blogs</a>
+        		</li>
+
+        		<li class="nav-item">
+          			<a class="nav-link" href="contactme.html">Contact Me</a>
+        		</li>
+      		</ul>
+    	</nav>
+
+
+<!--
+			{% if path == '/index.html' %}
+				<a href= "index.html"> HOME PAGE</a>
+			{% else %}
+				<a href= "index.html"> Home Page</a>
+			{% endif %}
+
+
+			{% if path == '/favoritefoods.html' %}
+				<a href= "favoritefoods.html"> FAVORITE FOODS</a>
+			{% else %}
+				<a href= "favoritefoods.html"> Favorite Foods</a>
+			{% endif %}
+
+
+			{% if path == '/family.html' %}
+				<a href ="family.html">FAMILY</a>
+			{% else %}
+				<a href ="family.html">Family</a>
+			{% endif %}
+
+
+			{% if path == '/login.html' %}
+				<a href= "login.html">LOGIN</a>
+			{% else %}
+				<a href= "login.html">Login</a>
+			{% endif %}
+		</nav>
+-->
+	</header>
+		{% block content %}
+		{% endblock %}
+<footer>
+	<p> Copy right © Carly Belloff from the <a href= 'http://www.umich.edu'> University of Michigan </a> </p>
+	<a href='https://www.facebook.com/carly.belloff'>
+		<img src="static/images/facebook.jpg" width=75px>
+		</img>	
+	</a>
+	<a href='https://twitter.com/CarlyBelloff'>
+		<img src="static/images/twitter.jpg" width=75px>
+		</img>	
+	</a>
+	<a href='https://www.instagram.com/carlybelloff/'>
+		<img src="static/images/instagram.jpg" width=75px>
+		</img>	
+	</a>
+	<a href='https://www.linkedin.com/in/carly-belloff-0abb70a6?trk'>
+		<img src="static/images/linkedin.jpg" width=75px>
+		</img>	
+	</a>
+</footer>	
+</body>
+</html>
+
