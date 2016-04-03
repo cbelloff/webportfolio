@@ -1,32 +1,73 @@
 {% extends "templates/base.html" %}
 
 {% block content %}
-	<p>Chicken noodle soup is my favorite food.</p>
-	
-	<a href='index.html'>
-		<img src='https://s.yimg.com/fz/api/res/1.2/qEk2COtn.YDGNQzz_o0iNQ--/YXBwaWQ9c3JjaGRkO2g9NTMxO3E9OTU7dz04MDA-/http://3.bp.blogspot.com/-BAmdzP3o288/TelKjerfBkI/AAAAAAAABaY/HB_Cy-KH2Po/s1600/cute-puppy-pictures4.jpg'>
-		</img>	
+<div class='container'>
+	<div class="row">
+        <div class="col-md-6 portfolio-item">
+            <a href="blogone.html">
+                <img class="img-responsive" src="static/images/cod.jpg" alt="">
+            </a>
+            <h3>
+                <a href="blogone.html">Social Realism in FPS Games</a>
+                </h3>
+            <p>Imagine playing a video game with content in parallel with your social beliefs in real life. The video game becomes more than just a game, but reality, with a reaffirmation of social issues that are near and dear to you.</p>
+        	
+        </div>
+		
+		<div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="#">Picture Two</a>
+                </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+    </div>
 
-	</a>
-	
-	<div id='special_tag'>asdf</div>
-	<div>lunch</div>
+    <div class="row">
+        <div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="#">Picture Three</a>
+                </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
 
-	<script>
-		//alert("root beer");
-		function clicker() {
-			//alert("hi");
-			console.log("clicker ran!");
+        <div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="#">Picture Four</a>
+                </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+	</div>
 
-			var button = document.createElement('button');
-			button.innerHTML = "New Button";
-			button.className = "testing";
+	<div class="row">
+        <div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="#">Picture Five</a>
+                </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
 
-			var L = document.getElementsByTagName('div');
-			L[0].innerHTML = "python";
-		}
-		//clicker();
-
-
-	</script>
+        <div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="#">Picture Six</a>
+                </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+	</div>
+</div>		
 {% endblock %}
+
