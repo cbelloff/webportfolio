@@ -1,24 +1,15 @@
 {% extends "templates/base.html" %}
-
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Forms</title>
-	<script src='emailcheck.js'></script>
-</head>
 
-<body>
-	<form action= ""   onsubmit= "return check(this)">
+<p>
+I hope you enjoyed my web portfolio. If you have any questions at all please do not hesitate to leave a message below. Also, if you have any information you would like me to blog about, please feel free to leave a suggestion. I look forward to receiving your comments! 
+</p>
+
+	<form method= "post">
+		<label>Name:<input type= 'text' name= 'name' id='name'></label><br/>
 		<label>Email:<input type= 'email' name= 'email' id='e1'></label><br/>
-		<label>Email confirm:<input type= 'email' name= 'email' id='e2' ></label><br/>
-		<label>Name:<input type= 'text' name= 'text' id='name'></label><br/>
-		<label>Message:<input type= 'text' name= 'text' id='message'></label><br/>
+		<label>Message:<input type= 'text' name= 'message' id='message'></label><br/>
 			<p><input type='submit' value= 'submit'></p>
 	</form>
-</body>
-
-
 
 {% endblock %}
