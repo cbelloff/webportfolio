@@ -55,7 +55,6 @@ h1{
 
 @media only screen and (max-width: 800px){
 	body{
-		background-color: #D8F57C;
 		font-size: 13px;
 		margin-top: 10px;
 	}	
@@ -64,6 +63,18 @@ h1{
 	}
 	.resume{
 		width: 100%
+	}
+	.blogpictures{
+		width: 100%;
+	}
+	.blogtext{
+		padding-left:5px;
+		padding-right: 5px;
+	}
+	.footericons{
+		width:30px;
+		height:30px;
+		margin: 5px;
 	}
 }
 
@@ -83,8 +94,6 @@ h1{
 		margin-right: auto;
 		margin-left: auto;
 		padding-right: 10px;
-
-
 	}
 }
 
