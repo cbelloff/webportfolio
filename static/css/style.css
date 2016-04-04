@@ -1,22 +1,54 @@
 body {
-	background-color: #FFA8EE;
+	background-color:#D1D296;
 	border: solid black thin;
-	margin: 50px;
+	margin: 10px;
 }
 
-h1 {
+.header {
+	position: relative;
+}
+
+.headerimage{
+	width:100%;
+	height:200px;
+	z-index: 1;
+}
+
+.headername {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 24px;
+	font-weight: 500;
+	font-family: inherit;
+}
+footer {
+	text-align:center;
+}
+
+.blogpictures{
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.resume{
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.blogtext{
+	padding-left:50px;
+	padding-right:50px;
+}
+
+h1{
 	text-align: center;
 }
 
-.navbar-dark {
-	background-color: red;
-}
-
-header .testing {
-	background-color: blue;
-	display: block;
-}
-
-footer {
-	text-align:center;
+@media only screen and (max-width: 800px){
+	body{
+		background-color: #D8F57C;
+	}	
 }
