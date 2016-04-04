@@ -28,31 +28,83 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
     	if self.request.path == '/index.html':
             options= {
-                'Title': "CarlyBelloff",
-                'header': "Home",
-                'path': self.request.path
-            }
-        elif self.request.path == '/pictures.html':
-            options= {
-                'Title': "Family",
-                'header': "My Family",
                 'path': self.request.path
             }
         elif self.request.path == '/blogs.html':
             options= {
-                'Title': "Food",
-                'header': "Favorite Foods",
+                'path': self.request.path
+            }
+        elif self.request.path == '/resume.html':
+            options= {
                 'path': self.request.path
             }
         elif self.request.path == '/contactme.html':
             options= {
-                'Title': "Food",
-                'header': "Favorite Foods",
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogone.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogtwo.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogthree.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogfour.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogfive.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogsix.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogseven.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogeight.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blognine.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/blogten.html':
+            options= {
+                'path': self.request.path
+            }
+        elif self.request.path == '/submitted.html':
+            options= {
                 'path': self.request.path
             }
         else:
             return
         template = JINJA_ENVIRONMENT.get_template('templates' + self.request.path)
+        self.response.write(template.render(options))
+
+    def post(self):
+        name=self.request.get('name')
+        email=self.request.get('email')
+        message=self.request.get('message')
+
+        logging.info(name)
+        logging.info(email)
+        logging.info(message)
+   
+        
+        template = JINJA_ENVIRONMENT.get_template('templates/submitted.html')
+        options={
+            'path': "/submitted.html"
+        }
         self.response.write(template.render(options))
 
 class HomePageHandler(webapp2.RequestHandler):
@@ -66,45 +118,23 @@ class HomePageHandler(webapp2.RequestHandler):
                 template = JINJA_ENVIRONMENT.get_template('templates' + '/index.html')
                 self.response.write(template.render(options))
 
-class LoginHandler(webapp2.RequestHandler): 
-    def get(self):
-        template = JINJA_ENVIRONMENT.get_template('templates' + '/login.html')
-        options={
-                    'Title': "Login",
-                    'header': "Login",
-                    'path': self.request.path
-                }
-        self.response.write(template.render(options))
 
-    def post(self):
-        username=self.request.get('username')
-        password=self.request.get('password')
-        if username == 'Colleen':
-            if password == 'pass':
-                template = JINJA_ENVIRONMENT.get_template('templates' + '/loggedin.html')
-                options= {
-                    'Title': "Loggedin",
-                    'header': "Logged in...",
-                    'path': self.request.path
-                    }
-        else:
-            template = JINJA_ENVIRONMENT.get_template('templates' + '/login.html')  
-            options= {
-                    'Title': "Login",
-                    'header': "Login",
-                    'message': "Bad credentials. Try again.",
-                    'path': self.request.path
-                }
-            logging.info('username = ' + username)
-            logging.info ('password = ' + password)
-        self.response.write(template.render(options))
 
 app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
     ('/index.html', MainHandler),
-    ('/pictures.html', MainHandler),
     ('/blogs.html', MainHandler),
+    ('/resume.html', MainHandler),
     ('/contactme.html', MainHandler),
-    ('/login.html', LoginHandler),
-    ('/loggedin.html', LoginHandler)
+    ('/blogone.html', MainHandler),
+    ('/blogtwo.html', MainHandler),
+    ('/blogthree.html', MainHandler),
+    ('/blogfour.html', MainHandler),
+    ('/blogfive.html', MainHandler),
+    ('/blogsix.html', MainHandler),
+    ('/blogseven.html', MainHandler),
+    ('/blogeight.html', MainHandler),
+    ('/blognine.html', MainHandler),
+    ('/blogten.html', MainHandler),
+    ('/submitted.html', MainHandler)
 ], debug=True)
