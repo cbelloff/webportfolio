@@ -56,5 +56,32 @@ h1{
 @media only screen and (max-width: 800px){
 	body{
 		background-color: #D8F57C;
+		font-size: 13px;
+		margin-top: 10px;
 	}	
+	.headername{
+		font-size:20px;
+	}
 }
+
+@media only screen and (min-width: 1200px){
+	.headername{
+		font-size: 30px;
+	}
+	body{
+		font-size: 16px;
+	}
+	.col-lg-6{
+		font-family: arial;
+		text-align: center;
+	}
+	.col-lg-6 p{
+		text-align: left;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 10px;
+
+
+	}
+}
+
