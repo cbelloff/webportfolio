@@ -5,7 +5,19 @@
 I hope you enjoyed my web portfolio. If you have any questions at all please do not hesitate to leave a message below. Also, if you have any information you would like me to blog about, please feel free to leave a suggestion. I look forward to receiving your comments! 
 </p>
 
-	<form method= "post">
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+
+	<form onsubmit="return validateForm();" name="myForm" method= "post">
 		<label>Name:<input type= 'text' name= 'name' id='name'></label><br/>
 		<label>Email:<input type= 'email' name= 'email' id='e1'></label><br/>
 		<label>Message:<input type= 'text' name= 'message' id='message'></label><br/>
