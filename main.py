@@ -18,6 +18,9 @@ import webapp2
 import os
 import logging
 import jinja2
+from google.appengine.api import mail
+
+
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -92,15 +95,30 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(template.render(options))
 
     def post(self):
-        name=self.request.get('name')
+        fname=self.request.get('name')
         email=self.request.get('email')
         message=self.request.get('message')
 
-        logging.info(name)
+        if not mail.is_email_valid(email):
+            # prompt user to enter a valid address
+            template = JINJA_ENVIRONMENT.get_template('templates/contactme.html')
+        else:
+            to_address = "cbelloff@umich.edu <cbelloff@umich.edu>"
+            subject = "Thank you for contacting me!"
+            body = """
+        Contact Information :
+        Name : %s
+        Email : %s
+        Message : %s
+        """ % (fname, email, message)
+
+            #            mail.send_mail(sender_address, user_address, subject, body)
+        mail.send_mail(to_address, to_address, subject, body)
+        logging.info(fname)
         logging.info(email)
         logging.info(message)
-   
         
+
         template = JINJA_ENVIRONMENT.get_template('templates/submitted.html')
         options={
             'path': "/submitted.html"
